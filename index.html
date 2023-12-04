@@ -684,22 +684,47 @@
             </a>
           </div>
           <div class="col-xl-6 col-md-6">
-            <iframe
-              style="border-radius: 12px"
-              src="https://open.spotify.com/embed/episode/2PfdXmTz7fDNBYGlv1h1Uf?utm_source=generator&t=2225071"
-              width="100%"
-              height="352"
-              frameborder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
             <a
-              href="https://shutterscape.onrender.com/"
-              class="tf__portfolio_item"
-              data-cursor="Visit <br> site"
+              href="#"
+              class="tf__portfolio_item play_btn"
+              data-cursor="Audio <br> sound"
+              onclick="playSpotify()"
             >
-              <img
+              Play Spotify Episode
+            </a>
+
+            <script>
+              function playSpotify() {
+                // Get the <iframe> element
+                var spotifyIframe = document.createElement("iframe");
+
+                // Set attributes for the iframe
+                spotifyIframe.setAttribute("style", "border-radius:12px");
+                spotifyIframe.setAttribute(
+                  "src",
+                  "https://open.spotify.com/embed/episode/2PfdXmTz7fDNBYGlv1h1Uf?utm_source=generator&theme=0&t=2225071"
+                );
+                spotifyIframe.setAttribute("width", "100%");
+                spotifyIframe.setAttribute("height", "352");
+                spotifyIframe.setAttribute("frameBorder", "0");
+                spotifyIframe.setAttribute("allowfullscreen", "");
+                spotifyIframe.setAttribute(
+                  "allow",
+                  "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                );
+                spotifyIframe.setAttribute("loading", "lazy");
+
+                // Replace the href attribute with the Spotify iframe
+                var playBtn = document.querySelector(".play_btn");
+                playBtn.setAttribute("href", "#");
+                playBtn.innerHTML = ""; // Clear the inner text if you want
+
+                // Append the Spotify iframe to the <a> tag
+                playBtn.appendChild(spotifyIframe);
+              }
+            </script>
+
+            <!-- <img
                 src="images/lan-css.png"
                 alt="portfolio"
                 class="img-fluid w-100"
@@ -707,8 +732,8 @@
               <div class="text">
                 <h4>Shutterscape</h4>
                 <p>Group Project</p>
-              </div>
-            </a>
+              </div> -->
+            <!-- </a> -->
           </div>
         </div>
       </div>
