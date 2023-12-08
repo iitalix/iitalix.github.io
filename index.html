@@ -689,6 +689,10 @@
                 <h4>Equipped: In-Game & In Real Life Podcast</h4>
                 <p>Learn more about my career transition journey!</p>
               </div>
+
+              <div id="spotify-iframe">
+                <div id="embed-iframe"></div>
+              </div>
             </a>
           </div>
         </div>
@@ -1132,6 +1136,9 @@ SUBSCRIBE END
         CURSOR END
     =================================-->
 
+    <!--spotify popup-->
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+
     <script src="js/plugin.js"></script>
     <!--scroll button js-->
     <script src="js/scroll_button.js"></script>
@@ -1141,5 +1148,19 @@ SUBSCRIBE END
     <script src="js/animation.js"></script>
     <!--main/custom js-->
     <script src="js/main.js"></script>
+    <script>
+      window.onSpotifyIframeApiReady = (IFrameAPI) => {
+        const element = document.getElementById("embed-iframe");
+        const options = {
+          uri: "spotify:episode:2PfdXmTz7fDNBYGlv1h1Uf",
+          width: "50%",
+        };
+        const callback = (EmbedController) => {
+          EmbedController.loadUri(options.uri);
+          EmbedController.play()
+        };
+        IFrameAPI.createController(element, options, callback);
+      };
+    </script>
   </body>
 </html>

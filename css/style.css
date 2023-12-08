@@ -1006,7 +1006,7 @@ button {
 }
 
 .tf__portfolio_item .text h4 {
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
