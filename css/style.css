@@ -591,6 +591,10 @@ button {
   margin-left: 12px;
 }
 
+.profile-pic {
+  border-radius: 50%;
+}
+
 /* for small device end */
 
 /* menu end */
