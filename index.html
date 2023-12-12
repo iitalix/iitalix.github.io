@@ -720,6 +720,38 @@
             <div class="tf__single_testimonial">
               <div class="img">
                 <img
+                  src="images/testimonial/mira.jpg"
+                  alt="clients"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <!-- <p class="rating">
+                <i class="fa-solid fa-star-sharp"></i>
+                <i class="fa-solid fa-star-sharp"></i>
+                <i class="fa-solid fa-star-sharp"></i>
+                <i class="fa-solid fa-star-sharp"></i>
+                <i class="fa-solid fa-star-sharp"></i>
+              </p> -->
+              <h3>Miroslawa Borkowska</h3>
+              <h5>Software Engineer</h5>
+              <p class="description">
+                Lan is an absolute gem to have on any team. His kindness and
+                willingness to go above and beyond in offering assistance truly
+                sets him apart. In coding, Lan’s talent is matched only by his
+                dedication and focus. Always eager to expand his knowledge and
+                apply it in innovative ways, Lan brings a creative touch to both
+                code and design. Having Lan around is more than just having a
+                skilled team member, it's about having someone who makes a
+                genuine difference, both as a professional and as an exceptional
+                human being.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xl-6">
+            <div class="tf__single_testimonial">
+              <div class="img">
+                <img
                   src="images/testimonial/josh.jpg"
                   alt="clients"
                   class="img-fluid w-100"
@@ -780,6 +812,7 @@
               </p>
             </div>
           </div>
+
           <div class="col-xl-6">
             <div class="tf__single_testimonial">
               <div class="img">
@@ -1157,7 +1190,7 @@ SUBSCRIBE END
         };
         const callback = (EmbedController) => {
           EmbedController.loadUri(options.uri);
-          EmbedController.play()
+          EmbedController.play();
         };
         IFrameAPI.createController(element, options, callback);
       };
