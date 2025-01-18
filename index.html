@@ -1186,7 +1186,7 @@ SUBSCRIBE END
         };
         const callback = (EmbedController) => {
           EmbedController.loadUri(options.uri);
-          EmbedController.play();
+          // EmbedController.play();
         };
         IFrameAPI.createController(element, options, callback);
       };
